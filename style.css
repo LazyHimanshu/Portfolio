@@ -1,0 +1,465 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #121212;
+    color: #f1f1f1;
+    font-weight: 400; /* Global font weight */
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Navbar */
+  header {
+    background: #1f1f1f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures the container takes the full width of the screen */
+    padding: 10px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between logo and text */
+    font-size: 0.8rem;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 5%;
+  }
+
+  h1 {
+    font-weight: 400; /* Thinner font */
+    font-size: 2rem; /* Adjust as needed */
+    margin-left: 10px;
+    color: #fff; /* Set the color if needed */ 
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    color: #f1f1f1;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #0d6efd;
+    transform: scale(1.1);
+  }
+
+  
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #f1f1f1;
+    margin-bottom: 4px;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('hero-bg.jpg') center/cover no-repeat;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 120px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0rem;
+  }
+  
+  .hero .brand {
+    color: #0d6efd;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  
+  .hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .btn:hover {
+    background: #0b5ed7;
+    transform: scale(1.05);
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px;
+    text-align: center;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0d6efd;
+  }
+  
+  .card-container,
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .card,
+  .post {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover,
+  .post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card h3,
+  .post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card p,
+  .post p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .card a,
+  .post a {
+    color: #0d6efd;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .card a:hover,
+  .post a:hover {
+    color: #0b5ed7;
+  }
+  
+/* Contact Section */
+#contact {
+    background: #1f1f1f;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: block; /* Default block layout for stacking */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 15px;
+    margin: 10px 0; /* Space between form fields */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    outline: none;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #bbb;
+  }
+  
+  .contact-form button {
+    background: #0d6efd;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Full width for the button */
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background: #0b5ed7;
+    transform: scale(1.05);
+  }
+  
+  .contact-form button:active {
+    transform: scale(1);
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 20px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1rem;
+    }
+  
+    .contact-form button {
+      font-size: 1rem;
+    }
+  }
+    
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 20px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1rem;
+    }
+  
+    .contact-form button {
+      font-size: 1rem;
+    }
+  }
+    
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 20px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1rem;
+    }
+  
+    .contact-form button {
+      font-size: 1rem;
+    }
+  }
+    
+  /* Footer */
+  footer {
+    background: #1f1f1f;
+    color: #aaa;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    filter: invert(1);
+    transition: transform 0.3s;
+    margin: 10px 5px;
+  }
+  
+  .social-icons a:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #1f1f1f;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .hero {
+      padding: 80px 20px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+
+
+    html {
+      /* Mobile first */
+      font-size: 10px;
+    }
+    
+    @media (min-width: 480px) {
+      html {
+        font-size: 12px;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      html {
+        font-size: 16px;
+      }
+    }
+    
+    
+    @media (min-width: 1440px) {
+      html {
+         font-size: 16px;
+       }
+     }
+
+    
+    
+    @media (max-width: 400px) {
+      /* Card container (tutorials) */
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .card {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        box-sizing: border-box;
+      }
+    
+      /* Blog container (posts) */
+      .blog-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .post {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        box-sizing: border-box;
+      }
+    
+      /* Card and post headings */
+      .card h3,
+      .post h3 {
+        font-size: 14px !important;
+        width: 100% !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        text-align: left !important;
+      }
+    
+      /* Card and post paragraphs */
+      .card p,
+      .post p {
+        font-size: 12px !important;
+        width: 100% !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        text-align: left !important;
+      }
+    }
+
+    
+
+    
+  }
