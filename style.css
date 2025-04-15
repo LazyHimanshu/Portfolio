@@ -44,6 +44,7 @@ header {
   align-items: center;
   width: 100%; /* Ensures the container takes the full width of the screen */
   padding: 10px;
+  padding-right: 25px;
 }
 
 .logo {
@@ -97,11 +98,11 @@ h1 {
 }
 
 .hamburger span {
-  height: 3px;
-  width: 25px;
+  height: 2.5px;
+  width: 24px;
   background: #f1f1f1;
   margin-bottom: 4px;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 /* Hero Section */
@@ -376,26 +377,26 @@ footer {
   
   @media (min-width: 480px) {
     html {
-      font-size: 12px;
+      font-size: 11px;
     }
   }
   
   @media (min-width: 768px) {
     html {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   
   @media (min-width: 1024px) {
     html {
-      font-size: 16px;
+      font-size: 13px;
     }
   }
   
   
   @media (min-width: 1440px) {
     html {
-       font-size: 16px;
+       font-size: 14px;
      }
    }
   
@@ -449,7 +450,6 @@ footer {
       text-align: left !important;
     }
   }
-  
   
   
 
